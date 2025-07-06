@@ -21,7 +21,8 @@ use scale_bits::{
 
 /// This represents a BitSequence, deferring decoding until the implementation wants to.
 pub struct BitSequence<'scale> {
-    format: Format,
+    /// Bit sequence format.
+    pub format: Format,
     bytes: &'scale [u8],
     // If we decode the bit sequence, we'll populate this too to cache it, since
     // we must decode fully to figure it out at the mo.
